@@ -245,7 +245,7 @@ $membersid= explode("\n",$txt);
 $substr = substr($text, 0, 28);
 	if (!in_array($chat_id,$membersid)) {
 Forward($admin,$chat_id,$message_id);
-Sendmessage($chat_id,"Shomare mord nazar ersal shod ✅");	
+Sendmessage($chat_id,"sticker mord nazar ersal shod ✅");	
 }else{
   
 Sendmessage($chat_id,"❌*You Are Banned*❌");	
@@ -265,7 +265,7 @@ $membersid= explode("\n",$txt);
 $substr = substr($text, 0, 28);
 	if (!in_array($chat_id,$membersid)) {
 Forward($admin,$chat_id,$message_id);
-Sendmessage($chat_id,"Shomare mord nazar ersal shod ✅");	
+Sendmessage($chat_id,"photo mord nazar ersal shod ✅");	
 }else{
   
 Sendmessage($chat_id,"❌*You Are Banned*❌");	
@@ -284,7 +284,7 @@ $membersid= explode("\n",$txt);
 $substr = substr($text, 0, 28);
 	if (!in_array($chat_id,$membersid)) {
 Forward($admin,$chat_id,$message_id);
-Sendmessage($chat_id,"Shomare mord nazar ersal shod ✅");	
+Sendmessage($chat_id,"voice mord nazar ersal shod ✅");	
 }else{
   
 Sendmessage($chat_id,"❌*You Are Banned*❌");	
@@ -302,7 +302,7 @@ $membersid= explode("\n",$txt);
 $substr = substr($text, 0, 28);
 	if (!in_array($chat_id,$membersid)) {
 Forward($admin,$chat_id,$message_id);
-Sendmessage($chat_id,"Shomare mord nazar ersal shod ✅");	
+Sendmessage($chat_id,"video mord nazar ersal shod ✅");	
 }else{
   
 Sendmessage($chat_id,"❌*You Are Banned*❌");	
