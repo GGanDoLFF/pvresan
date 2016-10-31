@@ -235,7 +235,81 @@ Sendmessage($chat_id,"❌*You Are Banned*❌");
     }
       }
 
-	
+	   elseif (isset($message['sticker'])) {
+      
+      if ( $chat_id != $admin) {
+    	
+    	$txt = file_get_contents('banlist.txt');
+$membersid= explode("\n",$txt);
+
+$substr = substr($text, 0, 28);
+	if (!in_array($chat_id,$membersid)) {
+Forward($admin,$chat_id,$message_id);
+Sendmessage($chat_id,"Shomare mord nazar ersal shod ✅");	
+}else{
+  
+Sendmessage($chat_id,"❌*You Are Banned*❌");	
+
+}
+    }
+      }
+
+
+   elseif (isset($message['photo'])) {
+      
+      if ( $chat_id != $admin) {
+    	
+    	$txt = file_get_contents('banlist.txt');
+$membersid= explode("\n",$txt);
+
+$substr = substr($text, 0, 28);
+	if (!in_array($chat_id,$membersid)) {
+Forward($admin,$chat_id,$message_id);
+Sendmessage($chat_id,"Shomare mord nazar ersal shod ✅");	
+}else{
+  
+Sendmessage($chat_id,"❌*You Are Banned*❌");	
+
+}
+    }
+      }
+      
+         elseif (isset($message['voice'])) {
+      
+      if ( $chat_id != $admin) {
+    	
+    	$txt = file_get_contents('banlist.txt');
+$membersid= explode("\n",$txt);
+
+$substr = substr($text, 0, 28);
+	if (!in_array($chat_id,$membersid)) {
+Forward($admin,$chat_id,$message_id);
+Sendmessage($chat_id,"Shomare mord nazar ersal shod ✅");	
+}else{
+  
+Sendmessage($chat_id,"❌*You Are Banned*❌");	
+
+}
+    }
+      }
+               elseif (isset($message['video'])) {
+      
+      if ( $chat_id != $admin) {
+    	
+    	$txt = file_get_contents('banlist.txt');
+$membersid= explode("\n",$txt);
+
+$substr = substr($text, 0, 28);
+	if (!in_array($chat_id,$membersid)) {
+Forward($admin,$chat_id,$message_id);
+Sendmessage($chat_id,"Shomare mord nazar ersal shod ✅");	
+}else{
+  
+Sendmessage($chat_id,"❌*You Are Banned*❌");	
+
+}
+    }
+      }
    
 
 
