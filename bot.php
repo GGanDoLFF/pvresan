@@ -56,7 +56,7 @@ $username = $update->message->from->username;
 $textmessage = isset($update->message->text)?$update->message->text:'';
 $rpto = $update->message->reply_to_message->forward_from->id;
 $stickerid = $update->message->reply_to_message->sticker->file_id;
-$photo = $update->message->photo;
+$photo = isset($update->message->photo);
 $video = $update->message->video;
 $sticker = $update->message->sticker;
 $file = $update->message->document;
@@ -64,6 +64,11 @@ $music = $update->message->audio;
 $voice = $update->message->voice;
 $forward = $update->message->forward_from;
 $admin = 216996658;
+
+$userhelp = file_get_contents("data/userhelp");
+$accpet = file_get_contents("data/accpet");
+$canreq = file_get_contents("data/canreq");
+$inchat = file_get_contents("data/inchat");
 //-------
 function SendMessage($ChatId, $TextMsg)
 {
@@ -201,21 +206,6 @@ else
 	}
 
 
-elseif ($chat_id != $admin) {
-
-    	
-    	$txt = file_get_contents('banlist.txt');
-$membersid= explode("\n",$txt);
-$substr = substr($text, 0, 28);
-	if (!in_array($chat_id,$membersid)) {
-Forward($admin,$chat_id,$message_id);
-Sendmessage($chat_id,"Pm You send to Pv Admin ✅");
-}else{
-  
-Sendmessage($chat_id,"❌*You Are Banned*❌");
-
-    }
-    }
       elseif (isset($message['contact'])) {
       
       if ( $chat_id != $admin) {
@@ -434,4 +424,8 @@ sendmessage($chat_id,"از لیست بلاک شده ها پاک شد");
  Sendmessage($chat_id,"test");
  }
 }
+
+
+
+
 ?>
